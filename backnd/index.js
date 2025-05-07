@@ -1,5 +1,7 @@
-const express = require('express')
-require('dotenv').config()
+// const express = require('express')
+import express from "express"
+// require('dotenv').config()
+import 'dotenv/config'
 console.log(process.env.port);
 //can also write like-->  import express from "express"
 const app = express()
@@ -54,7 +56,7 @@ app.get('/login', (req, res) => {
   res.send('<h1>Please login first</h1>')
 })
 
-app.get('/jokes',(req,res)=>{
+app.get('/api/jokes',(req,res)=>{ //statndard syntax for apis --> /api/
   res.json(jokes)
 })
 app.listen(process.env.port, () => {
