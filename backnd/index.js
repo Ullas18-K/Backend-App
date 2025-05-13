@@ -43,6 +43,7 @@ const jokes = [
     likes: 0
   }
 ];
+app.use(cors());
 
 app.get('/',(q,r)=>{
  r.send("hello waddup!!")
